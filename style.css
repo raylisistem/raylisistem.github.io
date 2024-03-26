@@ -2,6 +2,34 @@
 	box-sizing: border-box;
 }
 
+@media (orientation: landscape) {
+  .hizray {
+    display: flex;
+  }
+  
+  .hizray img {
+    width: 50%;
+  }
+  
+  .hizray div {
+    width: 50%;
+  }
+}
+
+@media (orientation: portrait) {
+  .hizray {
+    display: block;
+  }
+
+  .hizray img {
+    width: 100%;
+  }
+  
+  .hizray div {
+    width: 100%;
+  }
+}
+
 table {
 	table-layout: auto;
 }

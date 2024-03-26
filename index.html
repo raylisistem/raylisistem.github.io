@@ -10,9 +10,12 @@
   <title>Raylı Sistem Arşivi</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
 	<link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
-  <h1>İstanbul Kent İçi Raylı Sistem Arşivi <span style="font-size: 1.5rem;">v0.7</span></h1> 
+  <h1>İstanbul Kent İçi Raylı Sistem Arşivi <span style="font-size: 1.5rem;">v0.8</span></h1> 
   <p>İstanbul'da İBB ve UAB tarafından işletilen, inşa edilen ve planlanan tüm raylı sistem hatlarının web arşivi</p>
     
   <h2>İşletmedeki Hatlar</h2>
@@ -67,7 +70,7 @@
       <ul>
         <li>Sefer Süresi: Yenikapı-Otogar-Atatürk Havalimanı kesimi 32dk, Yenikapı-Otogar-Kirazlı kesimi 22dk</li>
         <li>Günlük Yolcu Sayısı: 370.000 (2023 yılı ortalaması)</li>
-        <li>Saatlik Tek Yöne Yolcu Kapasitesi: <i>25.000</i></li>
+        <li>Saatlik Tek Yöne Yolcu Kapasitesi: <i>34.000</i></li>
         <li>Araç Markası: ABB</li>
         <li>Araç Sayısı: 4 vagonlu setler halinde 105 vagon (Vagon başı 257 yolcu kapasitesi, 70 adeti sürücü kabinli)</li>
         <li>Araç Boyutları: 23,2m uzunluk, 2,65m genişlik</li>
@@ -230,7 +233,7 @@
       <b>Teknik Detaylar</b>
       <ul>
         <li>Sefer Süresi: 43,5dk</li>
-        <li>Günlük Yolcu Sayısı: 74.000 (2023 yılı ortalaması)</li>
+        <li>Günlük Yolcu Sayısı: 74.000 (Kayaşehir-Kirazlı kesimi, 2023 yılı ortalaması)</li>
         <li>Saatlik Tek Yöne Yolcu Kapasitesi: 70.000</li>
         <li>Araç Markası: Alstom</li>
         <li>Araç Sayısı: 4 vagonlu setler halinde 80 vagon (Vagon başı 241 yolcu kapasitesi, 2009 model)</li>
@@ -336,48 +339,54 @@
   </details>
   
   <details id="m5">
-    <summary><b class="m5"><object data="./assets/m5-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M5 Üsküdar-Çekmeköy</b></summary>
+    <summary><b class="m5"><object data="./assets/m5/m5-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M5 Üsküdar-Samandıra Merkez</b></summary>
     <p>
 
-      <object data="./assets/m5-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m5/m5-diagram-v2.svg" width="100%" height="100%"></object>
 
       M5 Metro Hattı, İstanbul'un Anadolu Yakası'nda hizmet veren ikinci metro hattıdır. 2017 yılında hizmete açılan hat, İstanbul ve Türkiye'nin ilk sürücüsüz metrosudur. İlk etabına 2012 yılında başlanıp 5 yıllık bir sürenin ardından 2017 yılında açılmıştır.
       <br><br>
-      M5 Metro Hattı, doğu-batı ekseninde olup Üsküdar - Çekmeköy olarak hizmet vermektedir. Üsküdar'dan başlayan hat Altunizade, Ümraniye, Dudullu gibi yoğun konut bölgelerinden geçerek Çekmeköy'de son bulmaktadır.
+      M5 Metro Hattı, doğu-batı ekseninde olup Üsküdar - Samandıra Merkez olarak hizmet vermektedir. Üsküdar'dan başlayan hat Altunizade, Ümraniye, Dudullu, Çekmeköy, Sancaktepe gibi yoğun konut bölgelerinden geçerek Samandıra'da son bulmaktadır.
+      <br><br>
+      Hattın Üsküdar-Çekmeköy kesiminde yarım boy PAKS, Çekmeköy-Samandıra kesiminde tam boy PAKS kullanılmıştır.
 
       <br><br>
       <b>Entegrasyonlar</b>
       <br>
-      5 aktarma istasyonuyla birlikte hattın mevcutta 3, <i>planlanan veya inşaat aşamasındaki hatlarla</i> birlikte ise toplamda 8 farklı hat ile entegrasyonu bulunmaktadır.
+      7 aktarma istasyonuyla birlikte hattın mevcutta 3, <i>planlanan veya inşaat aşamasındaki hatlarla</i> birlikte ise toplamda 10 farklı hat ile entegrasyonu bulunmaktadır.
       <br>
       <ul>
         <li>Üsküdar İstasyonu'nda <i>Üsküdar-Harem Tramvay Hattı, Üsküdar-Maltepe Tramvay Hattı</i> ve Marmaray hattı ile,</li>
         <li>Altunizade İstasyonu'nda <i><span style="color: #B16400;">M14 Altunizade-Bosna Bulvarı</span> Metro Hattı</i> ve Metrobüs hattı ile,</li>
         <li><i>Ümraniye İstasyonu'nda HIZRAY hattı ile,</i></li>
         <li><i>Çarşı İstasyonu'nda <span style="color: #CAD300;">M12 Ümraniye-Ataşehir-Göztepe</span> Metro Hattı ile,</i></li>
-        <li>Dudullu İstasyonu'nda <span style="color: #427BBF;">M8 Bostancı-Parseller</span> Metro Hattı ile entegrasyonu bulunmaktadır.</li>
+        <li>Dudullu İstasyonu'nda <span style="color: #427BBF;">M8 Bostancı-Parseller</span> Metro Hattı ile,</li>
+        <li><i>Sarıgazi İstasyonu'nda <span style="color: #00AB4E;">M13 Yenidoğan-Söğütlüçeşme</span> Metro Hattı ile,</i></li>
+        <li><i>Sancaktepe İstasyonu'nda HIZRAY hattı ile</i> entegrasyonu bulunmaktadır.</li>
       </ul>
             
       <br>
       <b>Hattın Uzunluğu</b>
       <ul>
-        <li>Üsküdar-Çekmeköy kesimi toplamda 20 kilometredir.</li>
+        <li>Üsküdar-Çekmeköy kesimi 20 km,</li>
+        <li>Çekmeköy-Samandıra kesimi ise 6,5 km olmak üzere toplamda 26,5 kilometredir.</li>
       </ul>
             
       <br>
       <b>İstasyon Sayısı</b>
       <ul>
-        <li>Üsküdar-Çekmeköy kesimi toplamda 16 istasyondur.</li>
+        <li>Üsküdar-Çekmeköy kesimi 16 istasyon,</li>
+        <li>Çekmeköy-Samandıra kesiminde ise Çekmeköy ve Sancaktepe Şehir Hastanesi İstasyonu hariç 4 istasyon olmak üzere toplamda 20 istasyondur.</li>
       </ul>
             
       <br>
       <b>Teknik Detaylar</b>
       <ul>
-        <li>Sefer Süresi: 32dk</li>
-        <li>Günlük Yolcu Sayısı: 240.000 (2023 yılı ortalaması)</li>
+        <li>Sefer Süresi: 43dk</li>
+        <li>Günlük Yolcu Sayısı: 240.000 (Üsküdar-Çekmeköy kesimi, 2023 yılı ortalaması)</li>
         <li>Saatlik Tek Yöne Yolcu Kapasitesi: 65.000</li>
         <li>Araç Markası: CAF-Mitsubishi</li>
-        <li>Araç Sayısı: 6 vagonlu setler halinde 126 vagon</li>
+        <li>Araç Sayısı: 6 vagonlu setler halinde 126+24 vagon (ÇSS kapsamında 24 vagon ilave edilmiştir.)</li>
         <li>Araç Numaralandırması:</li>
         <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
         <li>Peron Boyutları: 140m</li>
@@ -389,7 +398,7 @@
       <br>
       <b>İstasyon Yapıları</b>
       <ul>
-        <li>5 tünel, 6 top-down ve 5 aç-kapa istasyon bulunmaktadır.</li>
+        <li>8 tünel, 6 top-down ve 6 aç-kapa istasyon bulunmaktadır.</li>
       </ul>
             
       <br>
@@ -399,6 +408,7 @@
       <ul>
         <li>15 Aralık 2017'de hattın ilk kesimi olan Üsküdar - Yamanevler arası hizmete alınmıştır.</li>
         <li>21 Ekim 2018'de Yamanevler - Çekmeköy kesimi hizmete alınmıştır.</li>
+        <li>16 Mart 2024'te Çekmeköy - Samandıra kesimi hizmete alınmıştır.</li>
       </ul>
     </p>
   </details>
@@ -614,49 +624,56 @@
   </details>
 
   <details id="m9">
-    <summary><b class="m9"><object data="./assets/m9-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M9 Olimpiyat-Bahariye</b></summary>
+    <summary><b class="m9"><object data="./assets/m9/m9-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M9 Ataköy-Olimpiyat</b></summary>
     <p>
 
-      <object data="./assets/m9-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m9/m9-diagram-v2.svg" width="100%" height="100%"></object>
 
       M9 Metro Hattı, İstanbul'un Avrupa Yakası'nda hizmet veren bir metro hattıdır. İlk etabına 2006 yılında başlanıp 7 yıllık bir sürenin ardından M3 hattı kapsamında 2013 yılında açılmıştır.
       <br><br>
-      M9 Metro Hattı, Olimpiyat - Bahariye olarak hizmet vermektedir. Olimpiyat'tan başlayan hat İkitelli Sanayi, MASKO gibi yoğun sanayi bölgelerinden geçerek Bahariye'de son bulmaktadır.
+      M9 Metro Hattı, Ataköy - Olimpiyat olarak hizmet vermektedir. Ataköy'den başlayan hat Yenibosna, Çobançeşme, Mimar Sinan, Atatürk Mahallesi, İkitelli Sanayi gibi yoğun sanayi ve konut bölgelerinden geçerek Olimpiyat'ta son bulmaktadır.
       <br><br>
       Hat, M3 ile aynı teknik özelliklere sahip olup ilk etabı olan Olimpiyat-İkitelli Sanayi kesimi M3 kapsamında inşa edilip hizmete açılmıştır. Ayrıca hatta M3 hattı ile ortak araçlar kullanımaktadır.
       <br><br>
+
       <b>Entegrasyonlar</b>
       <br>
-      2 aktarma istasyonuyla birlikte hattın mevcutta 1, <i>planlanan veya inşaat aşamasındaki hatlarla</i> birlikte ise toplamda 2 farklı hat ile entegrasyonu bulunmaktadır.
+      6 aktarma istasyonuyla birlikte hattın mevcutta 3, <i>planlanan veya inşaat aşamasındaki hatlarla</i> birlikte ise toplamda 6 farklı hat ile entegrasyonu bulunmaktadır.
       <br>
       <ul>
         <li><i>Olimpiyat İstasyonu'nda <span style="color: #AC5391;">M11 Gayrettepe-İstanbul Havalimanı-Halkalı</span> Metro Hattı ile,</i></li>
         <li>İkitelli Sanayi İstasyonu'nda ise <span style="color: #00A9E2;">M3 Kayaşehir-Kirazlı</span> Metro Hattı ile entegrasyonu bulunmaktadır.</li>
+        <li><i>Atatürk Mahallesi İstasyonu'nda <span style="color: #F29FC0;">M7 Yıldız-Mahmutbey</span> Metro Hattı ile,</i></li>
+        <li><i>Mimar Sinan İstasyonu'nda <span style="color: #EF1C24;">M1B Yenikapı-Otogar-Halkalı</span> Metro Hattı ile,</i></li>
+        <li>Yenibosna İstasyonu'nda <span style="color: #EF1C24;">M1A Yenikapı-Otogar-Atatürk Havalimanı</span> Metro Hattı ile,</li>
+        <li>Ataköy İstasyonu'nda Marmaray hattı ile entegrasyonu bulunmaktadır.</li>
       </ul>
             
       <br>
       <b>Hattın Uzunluğu</b>
       <ul>
         <li>Olimpiyat-Bahariye kesimi toplamda 5,9 kilometredir.</li>
+        <li>Bahariye-Ataköy kesimi ise 11,3 km olmak üzere toplamda 17,2 kilometredir.</li>
       </ul>
             
       <br>
       <b>İstasyon Sayısı</b>
       <ul>
         <li>Olimpiyat-Bahariye kesimi toplamda 5 istasyondur.</li>
+        <li>Bahariye-Ataköy kesiminde ise Bahariye ve Mimar Sinan İstasyonu hariç 8 istasyon olmak üzere toplamda 13 istasyondur.</li>
       </ul>
             
       <br>
       <b>Teknik Detaylar</b>
       <ul>
-        <li>Sefer Süresi: 10dk</li>
-        <li>Günlük Yolcu Sayısı: 17.000 (2023 yılı ortalaması)</li>
-        <li>Saatlik Tek Yöne Yolcu Kapasitesi: <i>5.784</i></li>
+        <li>Sefer Süresi: 26dk</li>
+        <li>Günlük Yolcu Sayısı: 17.000 (Olimpiyat-Bahariye kesimi, 2023 yılı ortalaması)</li>
+        <li>Saatlik Tek Yöne Yolcu Kapasitesi: 35.000</li>
         <li>Araç Markası: Alstom</li>
         <li>Araç Sayısı: 4 vagonlu setler halinde 80 vagon (M3 ile ortak)</li>
         <li>Araç Numaralandırması:</li>
         <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
-        <li>Peron Boyutları: Olimpiyat-İkitelli Sanayi kesimi 180m, İkitelli Sanayi-Bahariye kesimi 90m</li>
+        <li>Peron Boyutları: Olimpiyat-İkitelli Sanayi kesimi 180m, İkitelli Sanayi-Ataköy kesimi 90m</li>
         <li>Elektrifikasyon: 1500V DC rijit katener</li>
         <li>Sinyalizasyon: Bombardier Cityflo 350 (GoA2, ATO, ATP)</li>
         <li>Kumanda Merkezi ve Depo: Olimpiyat İstasyonu'nun yanı</li>
@@ -665,7 +682,7 @@
       <br>
       <b>İstasyon Yapıları</b>
       <ul>
-        <li>2 tünel ve 3 aç-kapa istasyon bulunmaktadır.</li>
+        <li>4 tünel ve 9 aç-kapa istasyon bulunmaktadır.</li>
       </ul>
             
       <br>
@@ -674,20 +691,21 @@
       <br><br>
       <ul>
         <li>22 Kasım 2013'te hattın ilk kesimi olan Olimpiyat - İkitelli Sanayi arası (M3 kapsamında) hizmete alınmıştır.</li>
-        <li>29 Mayıs 2021'te ise Bahariye - İkitelli Sanayi kesimi hizmete alınmıştır.</li>
+        <li>29 Mayıs 2021'te Bahariye - İkitelli Sanayi kesimi hizmete alınmıştır.</li>
+        <li>18 Mart 2024'te ise Ataköy - Bahariye kesimi hizmete alınmıştır.</li>
       </ul>
     </p>
   </details>
 
   <details id="m11">
-    <summary><b style="color: #AC5391;"><object data="./assets/m11-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M11/U1 Gayrettepe-İstanbul Havalimanı-Kargo Terminali</b></summary>
+    <summary><b style="color: #AC5391;"><object data="./assets/m11/m11-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M11/U1-U2 Gayrettepe-İstanbul Havalimanı-Arnavurköy Hastane</b></summary>
     <p>
 
-      <object data="./assets/m11-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m11/m11-diagram-v2.svg" width="100%" height="100%"></object>
 
       M11 Metro Hattı, İstanbul'un Avrupa Yakası'nda hizmet veren sürücüsüz bir metro hattıdır. 2023 yılında hizmete açılan hat, İstanbul ve Türkiye'nin en hızlı, en uzun ve ilk ekspres metrosudur. Aynı zamanda Ulaştırma ve Altyapı Bakanlığı tarafından işletilen ilk metro ve yerli sinyalizasyon sistemi kullanan ilk metro hattı gibi ünvanlara da sahiptir. İlk etabına 2016 yılında başlanıp 7 yıllık bir sürenin ardından 2023 yılında açılmıştır.
       <br><br>
-      M11 Metro Hattı, kuzey-güney ekseninde olup Gayrettepe - Kargo Terminali olarak hizmet vermektedir. Gayrettepe'dan başlayan hat Kağıthane, Kemerburgaz, Göktürk ve İstanbul Havalimanı gibi yerlerden geçerek Kargo Terminali'nde son bulmaktadır.
+      M11 Metro Hattı, kuzey-güney ekseninde olup Gayrettepe - Arnavutköy Hastane olarak hizmet vermektedir. Gayrettepe'dan başlayan hat Kağıthane, Kemerburgaz, Göktürk, İstanbul Havalimanı gibi yerlerden geçerek Arnavutköy'de son bulmaktadır.
 
       <br><br>
       <b>Entegrasyonlar</b>
@@ -702,21 +720,21 @@
       <br>
       <b>Hattın Uzunluğu</b>
       <ul>
-        <li>Gayrettepe-Kargo Terminali kesimi toplamda 37,5 kilometredir.</li>
+        <li>Gayrettepe-Arnavutköy kesimi toplamda 51,5 kilometredir.</li>
       </ul>
             
       <br>
       <b>İstasyon Sayısı</b>
       <ul>
-        <li>Gayrettepe-Kargo Terminali kesimi 1'i kullanım dışı olmak üzere toplamda 9 istasyondur.</li>
+        <li>Gayrettepe-Arnavuköy kesimi 1'i kullanım dışı olmak üzere toplamda 11 istasyondur.</li>
       </ul>
             
       <br>
       <b>Teknik Detaylar</b>
       <ul>
-        <li>Sefer Süresi: 32dk</li>
-        <li>Günlük Yolcu Sayısı: 13.000 (2023 yılı ortalaması)</li>
-        <li>Saatlik Tek Yöne Yolcu Kapasitesi: 40.000</li>
+        <li>Sefer Süresi: 40dk</li>
+        <li>Günlük Yolcu Sayısı: 13.000 (Kağıthane-Kargo Terminali kesimi, 2023 yılı ortalaması)</li>
+        <li>Saatlik Tek Yöne Yolcu Kapasitesi: 40.000 (Gayrettepe-İstanbul Havalimanı kesimi), 36.000 (Arnavutköy-İstanbul Havalimanı kesimi)</li>
         <li>Araç Markası: CRRC</li>
         <li>Araç Sayısı: 4 vagonlu setler halinde 40 vagon</li>
         <li>Araç Numaralandırması:</li>
@@ -724,13 +742,13 @@
         <li>Peron Boyutları: 180m</li>
         <li>Elektrifikasyon: 1500V DC rijit katener</li>
         <li>Sinyalizasyon: Aselsan Cobalt (GoA4, UTO)</li>
-        <li>Kumanda Merkezi ve Depo: Kumanda merkezi İstanbul Havalimanı İstasyonu'nda, depo ise Kargo Terminali ile Taşoluk İstasyonu'nun arasındadır.</li>
+        <li>Kumanda Merkezi ve Depo: Ana kumanda merkezi İstanbul Havalimanı İstasyonu'nda, yedek kumanda merkezi ve depo ise Kargo Terminali ile Taşoluk İstasyonu'nun arasındadır.</li>
       </ul>
             
       <br>
       <b>İstasyon Yapıları</b>
       <ul>
-        <li>1 tünel ve 8 aç-kapa istasyon bulunmaktadır.</li>
+        <li>3 tünel ve 8 aç-kapa istasyon bulunmaktadır.</li>
       </ul>
             
       <br>
@@ -739,7 +757,8 @@
       <br><br>
       <ul>
         <li>22 Ocak 2023'te hattın ilk kesimi olan Kağıthane - Kargo Terminali arası hizmete alınmıştır.</li>
-        <li>29 Ocak 2024'te ise Gayrettepe - Kağıthane kesimi hizmete alınmıştır.</li>
+        <li>29 Ocak 2024'te Gayrettepe - Kağıthane kesimi hizmete alınmıştır.</li>
+        <li>19 Mart 2024'te ise Arnavutköy - Kargo Terminali kesimi hizmete alınmıştır.</li>
       </ul>
     </p>
   </details>
@@ -1052,7 +1071,7 @@
         <li>Araç Sayısı: 2 vagonlu setler halinde 30 vagon </li>
         <li>Araç Numaralandırması:</li>
         <li>Maksimum hız: 100km/sa (İşletmede max. 50km/sa)</li>
-        <li>Peron Boyutları: 70m</li>
+        <li>Peron Boyutları: 65m</li>
         <li>Elektrifikasyon: 750V DC 3. ray</li>
         <li>Sinyalizasyon: -</li>
         <li>Kumanda Merkezi ve Depo: Alibeyköy Cep Otogarı İstasyonu'nun yanı</li>
@@ -1331,7 +1350,7 @@
       16 aktarma istasyonuyla birlikte hattın mevcutta 9, <i>planlanan veya inşaat aşamasındaki hatlarla</i> birlikte ise toplamda 20 farklı hat ile entegrasyonu bulunmaktadır.
       <br>
       <ul>
-        <li>Halkalı İstasyonu'nda <i><span style="color: #EF1C24;">M1 Yenikapı-Atatürk Havalimanı-Kirazlı-Halkalı</span> Metro Hattı, <span style="color: #AC5391;">M11 Gayrettepe-İstanbul Havalimanı-Halkalı</span> Metro Hattı</i> ve <span style="color: #65656A;">B2 Halkalı-Bahçeşehir</span> Banliyö Hattı ile,</li>
+        <li>Halkalı İstasyonu'nda <i><span style="color: #EF1C24;">M1 Yenikapı-Atatürk Havalimanı-Kirazlı-Halkalı</span> Metro Hattı, <span style="color: #AC5391;">M11 Gayrettepe-İstanbul Havalimanı-Halkalı</span> Metro Hattı</i>, <span style="color: #65656A;">B2 Halkalı-Bahçeşehir</span> Banliyö Hattı ve HIZRAY hattı ile,</li>
         <li>Küçükçekmece İstasyonu'nda <i>M20 Sefaköy-Beylikdüzü Metro Hattı</i> ve Metrobüs hattı ile,</li>
         <li><i>Ataköy İstasyonu'nda <span style="color: #FFD400;">M9 Olimpiyat-Ataköy</span> Metro Hattı ile,</i></li>
         <li><i>Bakırköy İstasyonu'nda <span style="color: #00A9E2;">M3 Kayaşehir Merkez-Bakırköy Sahil</span> Metro Hattı ile,</i></li>
@@ -1680,10 +1699,10 @@
   </details>
 
   <details id="css">
-    <summary><b class="m5"><object data="./assets/m5-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> <object data="./assets/m13-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M5 Çekmeköy-Sancaktepe-Sultanbeyli</b> <b>&</b> <b style="color: #00AB4E;">M13 Yenidoğan-Cumhuriyet-Emek</b></summary>
+    <summary><b class="m5"><object data="./assets/m5/m5-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> <object data="./assets/m13-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M5 Çekmeköy-Sancaktepe-Sultanbeyli</b> <b>&</b> <b style="color: #00AB4E;">M13 Yenidoğan-Cumhuriyet-Emek</b></summary>
     <p>
 
-      <object data="./assets/i-css-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m5/css-diagram-full.svg" width="100%" height="100%"></object>
       <object data="./assets/i-yce-map.svg" width="100%" height="100%"></object>
 
       Çekmeköy-Sancaktepe-Sultanbeyli Metro Hattı, İstanbul'un Anadolu Yakası'nda hizmet veren M5 hattının uzatması olan bir metro hattıdır. Uzatmaya 2017 yılında başlanmış olup ilk etabı olan Çekmeköy-Samandıra Merkez kesiminin 16 Mart 2024 tarihinde açılması planlanmaktadır.
@@ -1781,7 +1800,7 @@
         <li>Ocak 2024'te Sarıgazi-Samandıra kesiminde test sürüşleri başlamıştır.</li>
         <li>10 Mart 2024'te Yenidoğan-Cumhuriyet-Emek kesiminde inşaata yeniden başlanmıştır.</li>
         <br>
-        <li>16 Mart 2024'te Çekmeköy - Samandıra kesiminin açılması planlanmaktadır.</li>
+        <li>16 Mart 2024'te Çekmeköy - Samandıra kesimi hizmete açılmıştır.</li>
         <li>Ocak 2025'te Samandıra - Sultanbeyli kesiminin açılması planlanmaktadır.</li>
       </ul>
     </p>
@@ -1947,7 +1966,7 @@
     <summary><b class="m9"><object data="./assets/m9-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M9 Ataköy-İkitelli</b></summary>
     <p>
 
-      <object data="./assets/i-ati-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m9/ati-diagram-full.svg" width="100%" height="100%"></object>
 
       Ataköy-İkitelli Metro Hattı, İstanbul'un Avrupa Yakası'nda hizmet veren M9 hattının uzatması olan bir metro hattıdır. Uzatmaya 2016 yılında başlanmış olup son etabı olan Bahariye-Ataköy kesiminin 18 Mart 2024 tarihinde açılması planlanmaktadır.
       <br><br>
@@ -2018,7 +2037,7 @@
         <li>20 Aralık 2023'te Bahariye-15 Temmuz kesiminde test sürüşleri başlamıştır.</li>
         <br>
         <li>29 Mayıs 2021'de İkitelli Sanayi - Bahariye kesimi hizmete alınmıştır.</li>
-        <li>18 Mart 2024'te Bahariye - Ataköy kesiminin açılması planlanmaktadır.</li>
+        <li>18 Mart 2024'te Bahariye - Ataköy kesimi hizmete alınmıştır.</li>
       </ul>
     </p>
   </details>
@@ -2114,7 +2133,7 @@
     <summary><b style="color: #AC5391;"><object data="./assets/m11-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M11/U2 Halkalı-İstanbul Havalimanı</b></summary>
     <p>
 
-      <object data="./assets/i-hyh-map.svg" width="100%" height="100%"></object>
+      <object data="./assets/m11/hyh-diagram-full.svg" width="100%" height="100%"></object>
 
       Halkalı-Kargo Terminali (İstanbul Havalimanı) Metro Hattı, İstanbul'un Avrupa Yakası'nda hizmet veren M11 hattının uzatması olan bir metro hattıdır. Uzatmaya 2018 yılında başlanmış olup ilk etabı olan Kargo Terminali-Arnavutköy kesiminin Mart 2024'te açılması planlanmaktadır.
       <br><br>
@@ -2179,7 +2198,7 @@
         <li>16 Mayı 2022'de TBM tünel kazıları tamamlanmıştır.</li>
         <br>
         <li>26 Aralık 2022'de hattın depo sahası hizmete açılmıştır.</li>
-        <li>Mart 2024'te Kargo Terminali - Arnavutköy kesiminin açılması planlanmaktadır.</li>
+        <li>19 Mart 2024'te Kargo Terminali - Arnavutköy kesimi hizmete alınmıştır.</li>
         <li>2025'te Arnavutköy - Halkalı kesiminin açılması planlanmaktadır.</li>
       </ul>
     </p>
@@ -2259,6 +2278,7 @@
         <li>Aralık 2022'de TBM tünel kazıları tamamlanmıştır.</li>
         <li>Mayıs 2023'te 150 Milyon Euro'luk kredi anlaşması yapılmıştır.</li>
         <li>Haziran 2023'te ray kaynatma çalışmaları başlamıştır.</li>
+        <li>14 Mart 2024'te Ataşehir-Finans Merkezi kesiminde test sürüşleri M8 trenleri ile başlamıştır.</li>
         <br>
         <li>2025 yılının ilk yarısında hattın açılması planlanmaktadır.</li>
       </ul>
@@ -2330,9 +2350,273 @@
       </ul>
     </p>
   </details>
+  
+  <details id="t5b">
+    <summary><b class="t5"><object data="./assets/t5-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> T5B Eyüp-Bayrampaşa</b></summary>
+    <p>
+
+      <object data="./assets/i-t5b-map.svg" width="100%" height="100%"></object>
+
+      Eyüpsultan-Bayrampaşa Tramvay Hattı, İstanbul'un Avrupa Yakası'nda hizmet veren T5 hattını çatallandırarak batıya doğru uzatması olacak bir tramvay hattıdır. Uzatmaya 2024 yılında başlanmış olup hattın 2027 yılında açılması planlanmaktadır.
+      <br><br>
+      Eyüpsultan-Bayrampaşa Tramvay Hattı, T5 hattını dik kesecek olup bitirildiğinde T5 hattına bağlı olarak T5B Eminönü - Bayrampaşa şeklinde hizmet verilecektir. Mevcut Feshane İstasyonu'ndan başlayan hat Eyüp, Demirkapı, Bayrampaşa gibi yoğun konut ve sanayi bölgelerinden geçerek Bayrampaşa Meydan'da son bulmaktadır.
+      <br><br>
+      Hattın 2024 Cumhurbaşkanlığı Kamu Yatırım Programı'na alınmaması sonucu hattın finansmanı özkaynak ile sağlanmıştır ve ihaleyi Antaş Altyapı-Gelişim Yapı kazanmıştır. İhale bedeli 3.278.000.000 TL'dir 
+      <br><br>
+      Hattın teknik özellikleri T5 hattı ile aynıdır. Hat için Feshane İstasyonu'nda T5 hattına ek platform yapılacaktır ve hat Demirkapı İstasyonu'ndan sonra Demirkapı-Meydan kesiminde yer altından gidecektir.
+
+      <br><br>
+      <b>Entegrasyonlar</b>
+      <br>
+      2 aktarma istasyonuyla birlikte hattın mevcutta 2, <i>planlanan hatlarla</i> birlikte ise toplamda 3 farklı hat ile entegrasyonu bulunmaktadır.
+      <br>
+      <ul>
+        <li><i>Eyüpsultan İstasyonu'nda Vezneciler-Fenertepe Metro hattı ile,</i></li>
+        <li>Bayrampaşa İstasyonu'nda <span style="color: #EF1C24;">M1 Yenikapı-Atatürk Havalimanı-Kirazlı</span> Metro Hattı ve <span style="color: #FF803E;">T4 Topkapı-Mescid-i Selam</span> Tramvay Hattı ile entegrasyonu bulunmaktadır.</li>
+      </ul>
+            
+      <br>
+      <b>Hattın Uzunluğu</b>
+      <ul>
+        <li>Feshane-Meydan kesimi toplamda 3,2 kilometredir.</li>
+      </ul>
+            
+      <br>
+      <b>İstasyon Sayısı</b>
+      <ul>
+        <li>Feshane-Meydan kesimi Feshane İstasyonu hariç 4 istasyondur.</li>
+      </ul>
+            
+      <br>
+      <b>Teknik Detaylar</b>
+      <ul>
+        <li>Sefer Süresi: 8,5dk</li>
+        <li>Saatlik Tek Yöne Yolcu Sayısı: 7.000</li>
+        <li>Maksimum hız: 100km/sa (İşletmede max. 50km/sa)</li>
+        <li>Peron Boyutları: 65m</li>
+        <li>Elektrifikasyon: 750V DC havai katener</li>
+        <li>Sinyalizasyon: -</li>
+        <li>Kumanda Merkezi ve Depo: T5 Alibeyköy Cep Otogarı İstasyonu'nun yanı</li>
+      </ul>
+            
+      <br>
+      <b>İstasyon Yapıları</b>
+      <ul>
+        <li>1 tünel, 1 aç-kapa, 1 yarma ve 1 hemzemin istasyon bulunmaktadır.</li>
+      </ul>
+            
+      <br>
+      <b>Tarihçe</b>
+      <ul>
+        <li>19 Şubat 2024'te hattın ihalesi yapılmıştır.</li>
+        <li>11 Mart 2024'te sözleşme imzalanmıştır.</li>
+        <li>11 Mart 2024'te işe başlanmıştır.</li>
+        <br>
+        <li>2027'de hattın açılması planlanmaktadır.</li>
+      </ul>
+    </p>
+  </details>
+
+  <h2>Proje Aşamasındaki Hatlar</h2>
+  
+  <details id="hizray">
+    <summary><b style="color: #1D4982;"><object data="./assets/hizray/m34-logo.svg" width="20em" height="20em" style="vertical-align: text-bottom;"></object> M34 HIZRAY</b></summary>
+    <p>
+
+      <object data="./assets/hizray/m34-diagram.svg" width="100%" height="100%"></object>
+      <br>
+      HIZRAY Metro Hattı, İstanbul'un iki yakası arasında hizmet verecek ekspres bir metro hattıdır. Hatta 2024 yılında başlanması planlanmış olup 2030 yılında açılması planlanmaktadır.
+      <br>
+      <div class="hizray">
+        HIZRAY Metro Hattı, TEM ve D-100 otoyolları arasında doğu-batı ekseninde olup tamamen bitirildiğinde Beylikdüzü - Sabiha Gökçen Havalimanı şeklinde hizmet verilecektir.
+        <br><br>
+        Beylikdüzü İstasyonu'ndan başlayan hat Halkalı, Kirazlı, Otogar, Kağıthane, 4. Levent, Ümraniye, Finans Merkezi, Sancaktepe yoğun konut ve iş bölgelerinden geçerek Sabiha Gökçen Havalimanı'nda son bulmaktadır.
+        
+        <img src="./assets/hizray/hat.png" alt="HIZRAY'ın Uydu Görüntüsü" style="margin-left: 1%; border-radius: 1em; object-fit:scale-down;">
+      </div>
+      <br>
+      HIZRAY hattı ile İstanbul'un kuzeyine doğru olan genişleme baskısı azalmış olacaktır. İstanbul'daki 3 havalimanının birbirine bağlanmasını sağlayan hat aynı zamanda otogar ve YHT istasyonlarını da bağlamaktadır.
+      <br><br>
+      Hattın boğaz geçişi deniz seviyesinin 130 metre altında ve deniz tabanının altındadır. Hattın boğaç geçişi tek tüp ve çift hat olarak planlanmıştır. Hattın projeleri tamamlanmış olup Bakanlık onayları beklenmektedir. Hattın inşası sırasında boğaz geçişi dahil 26+1 adet TBM kullanılacaktır. İlk etap olarak Kağıthane-Finans Merkezi kesiminin açılması planlanmaktadır.
+      <br><br>
+      Hattın iç ve dış döngü şeklinde işletilmesi planlanmaktadır. Kirazlı-Mevlana arasındaki iç döngüde 2,5 dakikada bir, Beylikdüzü-Sabiha Gökçen arasındaki dış döngüde ise 5 dakikada bir tren geçecek şekilde işletme yapılacaktır.
+      <br><br>
+      Hattın sadece ulaştırma değil aynı zamanda hem gündelik ihtiyaçları giderebilmesi amacıyla istasyonların üstüne ve içine meydanlar, sosyal donatı alanları gibi yapılar yapılmaktadır.
+
+      <br><br>
+      <b>Entegrasyonlar</b>
+      <br>
+      13 aktarma istasyonu ve 12 transfer merkezi ile birlikte hattın 24 farklı hat ile entegrasyonu bulunmaktadır.
+      <br>
+      <ul>
+        <li><i>Beylikdüzü İstasyonu'nda M20 Sefaköy-Beylikdüzü Metro Hattı, Ambarlı-Hadımköy Metro Hattı ve Metrobüs hattı ile,</i></li>
+        <li><i>Nazım Hikmet İstasyonu'nda <span style="color: #F29FC0;">M7 Kabataş-Saadetdere</span> Metro Hattı ile,</i></li>
+        <li>Halkalı İstasyonu'nda <i><span style="color: #EF1C24;">M1B Yenikapı-Otogar-Halkalı</span> Metro Hattı, <span style="color: #AC5391;">M11 Gayrettepe-İstanbul Havalimanı-Halkalı</span> Metro Hattı</i>, <span style="color: #65656A;">B2 Halkalı-Bahçeşehir</span> Banliyö Hattı ve Marmaray hattı ile,</li>
+        <li>Kirazlı İstasyonu'nda <span style="color: #EF1C24;">M1B Yenikapı-Otogar-Halkalı</span> Metro Hattı ve <span style="color: #00A9E2;">M3 Kayaşehir Merkez-Bakırköy Sahil</span> Metro Hattı ile,</li>
+        <li>Otogar İstasyonu'nda <span style="color: #EF1C24;">M1 Yenikapı-Atatürk Havalimanı-Halkalı</span> Metro Hattı ile,</li>
+        <li>Kağıthane İstasyonu'nda <span style="color: #F29FC0;">M7 Kabataş-Saadetdere</span> Metro Hattı, <span style="color: #AC5391;">M11 Gayrettepe-İstanbul Havalimanı-Halkalı</span> Metro Hattı, <i>İTÜ-Kağıthane Metro Hattı</i> ile,</li>
+        <li>4. Levent İstasyonu'nda <span style="color: #009943;">M2 Yenikapı-Seyrantepe-Hacıosman</span> Metro Hattı ile,</li>
+        <li>Ümraniye İstasyonu'nda <span style="color: #672C65;">M5 Üsküdar-Kurtköy</span> Metro Hattı ile,</li>
+        <li><i>Finans Merkezi İstasyonu'nda <span style="color: #CAD300;">M12 60. Yıl Parkı-Kazım Karabekir</span> Metro Hattı ve <span style="color: #00AB4E;">M13 Yenidoğan-Söğütlüçeşme</span> Metro Hattı ile,</i></li>
+        <li>Mevlana İstasyonu'nda <span style="color: #427BBF;">M8 Bostancı-Parseller</span> Metro Hattı ile,</li>
+        <li>Sancaktepe İstasyonu'nda <span style="color: #672C65;">M5 Üsküdar-Kurtköy</span> Metro Hattı ile,</li>
+        <li>Kurtköy İstasyonu'nda <span style="color: #E91977;">M4 Kadıköy-Kurtköy</span> Metro Hattı ve <span style="color: #672C65;">M5 Üsküdar-Kurtköy</span> Metro Hattı ile,</li>
+        <li>Sabiha Gökçen Havalimanı İstasyonu'nda <span style="color: #E91977;">M4 Kadıköy-Kurtköy</span> Metro Hattı ve <span style="color: #4CAA3C;">M10 Pendik Merkez-Kurtköy</span> Metro Hattı ile entegrasyonu bulunmaktadır.</li>
+      </ul>
+            
+      <b>Hat Uzunluğu</b>
+      <ul>
+        <li>Beylikdüzü-Sabiha Gökçen kesimi 3,4 km tek tüp (boğaz geçişi) ile beraber olmak üzere toplamda 74,5 kilometredir.</li>
+      </ul>
+            
+      <b>İstasyon Sayısı</b>
+      <ul>
+        <li>Beylikdüzü-4. Levent kesiminde (Avrupa Yakası) 7 istasyon</li>
+        <li>ve Ümraniye-Sabiha Gökçen kesiminde (Anadolu Yakası) 6 istasyon olmak üzere toplamda 13 istasyondur.</li>
+      </ul>
+            
+      <b>Teknik Detaylar</b>
+      <ul>
+        <li>Sefer Süresi: 53,4dk</li>
+        <li>Saatlik Tek Yöne Yolcu Kapasitesi: 1.500.000</li>
+        <li>Araç Sayısı: 10 vagonlu setler halinde 390 vagon</li>
+        <li>İşletimi Hızı: 140km/sa</li>
+        <li>Peron Boyutları: 220m</li>
+        <li>Elektrifikasyon: 1500V DC rijit katener</li>
+        <li>Sinyalizasyon: GoA2 + PAKS</li>
+        <li>Kumanda Merkezi ve Depo: Ana kumanda merkezi Kağıthane İstasyonu'nda, yedek kumanda merkezi ve depo ise Kurtköy İstasyonu'nun yanındadır.</li>
+      </ul>
+            
+      <br>
+      <details>
+        <summary><b>İstasyonlar (YAPIM AŞAMASINDADIR)</b></summary>
+        <ul>
+          <li>13 tünel tipi istasyon bulunmaktadır.</li>
+        </ul>
+        
+        <!--
+        <details style="margin-bottom: 0%;">
+          <summary>Beylikdüzü</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Nazım Hikmet</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Halkalı</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Kirazlı</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Otogar</summary>
+          <p>Bla Bla</p>
+        </details>
+        -->
+
+        <details style="margin-bottom: 0%;">
+          <summary>Kağıthane</summary>
+          <p>
+            Kağıthane Metro İstasyonu, hattın SGH yönündeki 6. istasyonudur. 3 farklı raylı sistem hattına aktarma sağlaması ile hattın en çok aktarmaya sahip 2. istasyonudur. İstasyon 33 metre derinliktedir.
+            <br>
+
+            <div class="hizray">
+              <img src="./assets/hizray/kagithane.png" alt="Kağıthane İstasyon Yapısı" width="50%" style="margin-right: 1%; border-radius: 1em;">
+
+              İstasyonun toplam alanı X m2 olup turnike katı aç-kapa yöntemiyle yapılacaktır, bu aç-kapa yapısı perona kadar inmektedir. Peronun ortasındaki aç-kapa yapısından iki yöne de hem peron tünelleri hem de orta bağlantı tüneli devam etmektedir. Ayrıca aç-kapa yapısında bulunan cam tavan sayesinde perona kadar gün ışığı girebilecektir.
+            </div>
+
+            <br>
+            İstasyonun peron katından turnike katına kadar 8 adet yürüyen merdiven ve 4 adet asansör bulunmaktadır.
+            <br><br>
+
+            <div class="hizray">
+              İstasyonun 3 adet giriş-çıkışı olup biri M7 Metro Hattı'nın yanındadır. Ayrıca istasyonun M11 Metro Hattı'na turnike katından yaya bağlantı tüneli bulunmaktadır. Bu sebeple M7 ve M11 hatları arasındaki aktarma da HIZRAY ile kolaylaşmış olacaktır.
+
+              <div id="map" style="width:300%; height: 20em;"></div>
+            </div>
+            
+          </p>
+        </details>
+
+        <!--
+        <details style="margin-bottom: 0%;">
+          <summary>4. Levent</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Ümraniye</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Finans Merkezi</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Mevlana</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Sancaktepe</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Kurtköy</summary>
+          <p>Bla Bla</p>
+        </details>
+        <details style="margin-bottom: 0%;">
+          <summary>Sabiha Gökçen Havalimanı</summary>
+          <p>Bla Bla</p>
+        </details>
+        -->
+      </details>
+            
+      <br>
+      <b>Tarihçe</b>
+      <ul>
+        <li>Kasım 2020'de hattın proje çalışmalarına başlanmıştır.</li>
+        <li>Kasım 2022'de hat ile ilgili tasarım çalıştayı düzenlenmiştir.</li>
+        <li>Ocak 2023'te hattın ön projeleri tamamlanmıştır.</li>
+        <br>
+        <li>2030'da hattın açılması planlanmaktadır.</li>
+      </ul>
+    </p>
+  </details>
 
   <!--
   <h2>Proje Aşamasındaki Hatlar</h2>
+  M34 HIZRAY
+  M20 TÜYAP-Beylikdüzü-Sefaköy-İncirli-Yenikapı
+  -
+  M? Söğütlüçeşme-Gayrettepe-İncirli
+  -
+  M? Vezneciler-Sultangazi-Fenertepe
+  M? İTÜ-Maslak-Kağıthane
+  M? Ambarlı-Hadımköy
+  M? Taksim-Okmeydanı
+  -
+  M? Altunizade-Çengelköy-Kavacık
+  M? Kartal-Uğur Mumcu
+  M? Maltepe-Samandıra
+  M2 Hacıosman-Sarıyer
+  -
+  M4/M10 SGH-Kurtköy
+  M14 Bosna Bulvarı-Küçüksu
+  -
+  M5 Sultanbeyli-Kurtköy
+  M7 Esenyurt-Saadetdere
+  M13 Emek-Finans Merkezi-Söğütlüçeşme
+  -
+  T?/Anadolutram Üsküdar-Kadıköy-Maltepe
+  T? Üsküdar-Harem
+  T? Esenler Cadde
+  -
+  F5 İTÜ-İstinye
+  F? Yıldız-Ortaköy
+  F? Altunizade-Çengelköy
   
   Veriler
   Yıllık Yolcu Sayısı
@@ -2343,17 +2627,9 @@
   Sürüş Modları
   -
   M ve U
-  -
   RTE2000-2004-2009 ve İTA2014
-  -
-  Metrolar Engelleniyor Mu?
-  Halkalı Metrosu Neden Gecikti?
-  -
-  KSS Hastanesi Arazisi
-  T1 Aksaray Armutu
      
   Araçlar
-  Sefer Sıklığı Hesaplama
   Kilometre Hesaplama
   DK Hesaplama
   Tren Simülasyonu
@@ -2363,12 +2639,15 @@
 
   <h2>İlerleme Durumları</h2>
   <details id="insaat">
-    <summary><b>2024 - Ocak Ayı</b></summary>
+    <summary><b>2024 - Şubat Ayı</b></summary>
     <b class="f4">F4 Rumeli Hisarüstü-Aşiyan</b>
     <div class="progress-bar f4" style="--width: 100" data-label="%100"></div>
     <br>
     <b class="t5">T5 Eminönü-Alibeyköy</b>
     <div class="progress-bar t5" style="--width: 100" data-label="%100"></div>
+    <br>
+    <b class="m9">M9 Ataköy-İkitelli</b>
+    <div class="progress-bar m9" style="--width: 99" data-label="%99"></div>
     <br>
     <b class="m7">M7 Kabataş-Mecidiyeköy-Mahmutbey</b>
     <div class="progress-bar m7" style="--width: 98.7" data-label="%98,7"></div>
@@ -2376,20 +2655,17 @@
     <b class="m8">M8 Bostancı-Dudullu-Parseller</b>
     <div class="progress-bar m8" style="--width: 98.5" data-label="%98,5"></div>
     <br>
-    <b class="m9">M9 Ataköy-İkitelli</b>
-    <div class="progress-bar m9" style="--width: 95" data-label="%95"></div>
-    <br>
     <b class="m5">M5 Çekmeköy-Sancaktepe-Sultanbeyli</b>
-    <div class="progress-bar m5" style="--width: 87" data-label="%87"></div>
+    <div class="progress-bar m5" style="--width: 89" data-label="%89"></div>
     <br>
     <b class="m12">M12 Ümraniye-Ataşehir-Göztepe</b>
-    <div class="progress-bar m12" style="--width: 75" data-label="%75"></div>
+    <div class="progress-bar m12" style="--width: 76" data-label="%76"></div>
     <br>
     <b class="m4">M4 Kaynarca-Pendik-Tuzla (1. Etap)</b>
-    <div class="progress-bar m4" style="--width: 62" data-label="%62"></div>
+    <div class="progress-bar m4" style="--width: 63.5" data-label="%63,5"></div>
     <br>
     <b class="m7">M7 Mahmutbey-Bahçeşehir-Esenyurt (1. Etap)</b>
-    <div class="progress-bar m7" style="--width: 35" data-label="%35"></div>
+    <div class="progress-bar m7" style="--width: 36.5" data-label="%36,5"></div>
     <br>
     <b class="m1">M1 Kirazlı-Halkalı (1. Etap)</b>
     <div class="progress-bar m1" style="--width: 18.5" data-label="%18,5"></div>
@@ -2397,6 +2673,40 @@
 
   <details>
     <summary><b>Önceki Aylar</b></summary>
+    <!-- Ocak Ayı -->
+    <details>
+      <summary><b>2024 - Ocak Ayı</b></summary>
+      <b class="f4">F4 Rumeli Hisarüstü-Aşiyan</b>
+      <div class="progress-bar f4" style="--width: 100" data-label="%100"></div>
+      <br>
+      <b class="t5">T5 Eminönü-Alibeyköy</b>
+      <div class="progress-bar t5" style="--width: 100" data-label="%100"></div>
+      <br>
+      <b class="m7">M7 Kabataş-Mecidiyeköy-Mahmutbey</b>
+      <div class="progress-bar m7" style="--width: 98.7" data-label="%98,7"></div>
+      <br>
+      <b class="m8">M8 Bostancı-Dudullu-Parseller</b>
+      <div class="progress-bar m8" style="--width: 98.5" data-label="%98,5"></div>
+      <br>
+      <b class="m9">M9 Ataköy-İkitelli</b>
+      <div class="progress-bar m9" style="--width: 95" data-label="%95"></div>
+      <br>
+      <b class="m5">M5 Çekmeköy-Sancaktepe-Sultanbeyli</b>
+      <div class="progress-bar m5" style="--width: 87" data-label="%87"></div>
+      <br>
+      <b class="m12">M12 Ümraniye-Ataşehir-Göztepe</b>
+      <div class="progress-bar m12" style="--width: 75" data-label="%75"></div>
+      <br>
+      <b class="m4">M4 Kaynarca-Pendik-Tuzla (1. Etap)</b>
+      <div class="progress-bar m4" style="--width: 62" data-label="%62"></div>
+      <br>
+      <b class="m7">M7 Mahmutbey-Bahçeşehir-Esenyurt (1. Etap)</b>
+      <div class="progress-bar m7" style="--width: 35" data-label="%35"></div>
+      <br>
+      <b class="m1">M1 Kirazlı-Halkalı (1. Etap)</b>
+      <div class="progress-bar m1" style="--width: 18.5" data-label="%18,5"></div>
+    </details>
+
     <!-- Aralık Ayı -->
     <details>
       <summary><b>2023 - Aralık Ayı</b></summary>
@@ -3289,6 +3599,27 @@
   </details>
 
   <h2>Araçlar</h2>
+  <details id="sefer">
+    <summary><b>Maksimum Sefer Sıklığı Hesaplama</b></summary>
+    <p>
+      <b>Tek Yön Sefer Süresi: (Dakika)</b>
+      <input type="number" id="durationinput" placeholder="Sefer Süresi (örn: 30,5)">
+
+      <b>İstasyon Sayısı</b>
+      <input type="text" id="stationinput" placeholder="İstasyon Sayısı">
+      
+      <b>Tren Seti Sayısı</b>
+      <input type="text" id="traininput" placeholder="Set Sayısı">
+    
+      <br>
+      <button onclick="updateFrequency()">Hesapla</button>
+      
+      <div id="frequencyinfo">
+        <h3>Sefer Sıklığı: -dk</h3>
+      </div>
+    </p>
+  </details>
+
   <details id="setNo">
     <summary><b>Vagon ve Set Numarası Hesaplama</b></summary>
     <p>
@@ -3312,6 +3643,30 @@
     }
     window.addEventListener('hashchange', openTarget);
     openTarget();
+
+    function updateFrequency() {
+      duration = document.getElementById("durationinput").value;
+      station = document.getElementById("stationinput").value;
+      train = document.getElementById("traininput").value;
+      
+      document.getElementById("frequencyinfo").innerHTML = "Sefer Sıklığı: " + (duration / station) * 2 * (station / train) + "dk"
+      return;
+    }
+
+    var map = L.map('map').setView([41.080007876401424, 28.975304049385507], 17);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker([41.07939702881305, 28.97436494167509]).addTo(map);
+    marker.bindPopup("M7 Çıkışı");
+    
+    var marker2 = L.marker([41.079542853948716, 28.97588877090915]).addTo(map);
+    marker2.bindPopup("Çıkış");
+    
+    var marker3 = L.marker([41.07935684404641, 28.975245040791375]).addTo(map);
+    marker3.bindPopup("Çıkış");
   </script>
 </body>
 </html>
