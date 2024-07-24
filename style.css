@@ -3,36 +3,73 @@
 }
 
 @media (orientation: landscape) {
-  .hizray {
+  .split {
     display: flex;
   }
   
-  .hizray img {
+  .split img {
     width: 50%;
     margin: 1%;
     border-radius: 1em;
   }
   
-  .hizray div {
-    width: 50%;
+  .split div {
+    border-radius: 1em;
+  }
+
+  .homepage {
+    width: calc(100vw - 11px);
+    height: 100vh;
+    right: calc((100vw - 800px + 10px) / 2);
+    top: calc((-20px));
+  }
+  
+  .searchbar {
+    width: 40%;
   }
 }
 
 @media (orientation: portrait) {
-  .hizray {
+  .split {
     display: block;
   }
 
-  .hizray img {
+  .split img {
     width: 100%;
     margin-right: 1%;
     margin-left: 1%;
     border-radius: 1em;
   }
   
-  .hizray div {
+  .split div {
     width: 100%;
   }
+
+  .shortcut {
+    visibility: hidden;
+  }
+  
+  .homepage {
+    width: calc(100vw - 11px);
+    height: 100vh;
+    right: 10px;
+    top: -20px;
+  }
+
+  .searchbar {
+    width: 80%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.homepage {
+  position: relative;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 
 table {
