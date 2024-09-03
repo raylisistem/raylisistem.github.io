@@ -76,6 +76,110 @@ table {
 	table-layout: auto;
 }
 
+
+.m1 {
+  color: #EF1C24;
+}
+ 
+.m2 {
+  color: #009943;
+}
+ 
+.m3 {
+  color: #00A9E2;
+}
+ 
+.m4 {
+  color: #E91977;
+}
+ 
+.m5 {
+  color: #672C65;
+}
+ 
+.m6 {
+  color: #C9AB78;
+}
+ 
+.m7 {
+  color: #F29FC0;
+}
+
+.m8 {
+  color: #427BBF;
+}
+ 
+.m9 {
+  color: #FFD400;
+}
+ 
+.m10 {
+  color: #4CAA3C;
+}
+ 
+.m11 {
+  color: #AC5391;
+}
+ 
+.m12 {
+	color: #CAD300;
+}
+ 
+.m13 {
+	color: #00A94F;
+}
+ 
+.m14 {
+	color: #B16400;
+}
+
+.m34 {
+  color: #376b8c;
+}
+
+.funi {
+  color: #7B7256;
+}
+
+.cable {
+  color: #65BBB1;
+}
+ 
+.t1 {
+  color: #004788;
+}
+
+.t2 {
+  color: #91ADA1;
+}
+
+.t3 {
+  color: #9C5427;
+}
+
+.t4 {
+  color: #FF803E;
+}
+
+.t5 {
+  color: #7D73B4;
+}
+
+.b1 {
+  color: #575754;
+}
+ 
+.b2 {
+  color: #65656A;
+}
+
+.b3 {
+  color: #E87D7D;
+}
+
+
+
+
 .progress-bar {
 	position: relative;
 	width: 100%;
@@ -100,98 +204,42 @@ table {
 	padding: .5em;
 }
 
-.f4::before {
+.progress-bar.f4::before {
   background-color: #7B7256;
 }
 
-.t5::before {
+.progress-bar.t5::before {
   background-color: #7D73B4;
 }
 
-.m7::before {
+.progress-bar.m7::before {
   background-color: #F29FC0;
 }
 
-.m8::before {
+.progress-bar.m8::before {
   background-color: #427BBF;
 }
 
-.m9::before {
+.progress-bar.m9::before {
   background-color: #FFD400;
 }
 
-.m5::before {
+.progress-bar.m5::before {
   background-color: #672C65;
 }
 
-.m12::before {
+.progress-bar.m12::before {
   background-color: #CAD300;
 }
 
-.m4::before {
+.progress-bar.m4::before {
   background-color: #E91977;
 }
 
-.m1::before {
+.progress-bar.m1::before {
   background-color: #EF1C24;
 }
 
-.m13::before {
+.progress-bar.m13::before {
   background-color: #00A94F;
-}
-
-b.f4 {
-  color: #7B7256;
-}
-
-b.t5 {
-  color: #7D73B4;
-}
-
-b.m7 {
-  color: #F29FC0;
-}
-
-b.m8 {
-  color: #427BBF;
-}
-
-b.m9 {
-  color: #FFD400;
-}
-
-b.m5 {
-  color: #672C65;
-}
-
-b.m12 {
-  color: #CAD300;
-}
-
-b.m4 {
-  color: #E91977;
-}
-
-b.m1 {
-  color: #EF1C24;
-}
-
-b.m2 {
-  color: #009943;
-}
-
-b.m3 {
-  color: #00A9E2;
-}
-
-b.m6 {
-  color: #C9AB78;
-}
-
-b.m11 {
-  color: #AC5391;
-}
-
-b.m13 {
-  color: #00A94F;
 }
