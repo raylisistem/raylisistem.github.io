@@ -19,9 +19,9 @@
       <p class="shortcut" style="color: #fff; margin: 0; font-weight: 600; font-size: 4em;">İSTANBUL KENT İÇİ</p>
       <p style="color: #fff; margin: 0; font-weight: 1000; font-size: 5em;">RAYLI SİSTEM ARŞİVİ</p>
       
-      <div class="searchbar" style="margin: 6vh auto; display: grid; justify-content: stretch;">
-        <input class="search" style="width: 100%; height: 7vh; border-radius: 20px; font-size: large; margin: 0;" type="text" placeholder="Ne Aramıştınız?.." onchange="inputUpdate()">
-        <a href="javascript:inputUpdate()" style="justify-self: end; position: absolute; margin-right: 1em; align-self: center;"><object data="./assets/search.svg" width="30em" style="vertical-align: text-bottom; pointer-events: none;"></object></a>
+      <div class="searchbar" style="margin: 6vh auto; width: 32vw; position: relative; display: flex; align-items: center;">
+        <input class="search" style="width: 100%; height: 7vh; border-radius: 20px; font-size: large; padding: 5px 40px 5px 15px; position: absolute; margin: 0;" type="text" placeholder="Ne Aramıştınız?.." onchange="inputUpdate()">
+        <a href="javascript:inputUpdate()" style="right: 0; position: absolute; margin-right: 1em;"><object data="./assets/search.svg" width="30em" style="vertical-align: text-bottom; pointer-events: none;"></object></a>
       </div>
 
       <div style="margin-bottom: 1vh;">
@@ -49,7 +49,7 @@
     </div>
   </div>
 
-  <h1 id="title">İstanbul Kent İçi Raylı Sistem Arşivi <span style="font-size: 1.5rem;">v0.12</span></h1> 
+  <h1 id="title">İstanbul Kent İçi Raylı Sistem Arşivi <span style="font-size: 1.5rem;">v0.13</span></h1> 
   <p>İstanbul'da İBB ve UAB tarafından işletilen, inşa edilen ve planlanan tüm raylı sistem hatlarının web arşivi</p>
 
   <h2 id="isletme">İşletmedeki Hatlar</h2>
@@ -753,12 +753,12 @@
     <ul>
       <li>Sefer Süresi: 25dk</li>
       <li>Günlük Yolcu Sayısı: 43.000 (2023 yılı ortalaması)</li>
-      <li>Saatlik Tek Yöne Yolcu Kapasitesi: 70.000</li>
+      <li>Saatlik Tek Yöne Yolcu Kapasitesi: 45.000</li>
       <li>Araç Markası: Hyundai Rotem</li>
       <li>Araç Sayısı: 4 vagonlu setler halinde 40 vagon
       <li>Araç Numaralandırması:</li>
       <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
-      <li>Peron Boyutları: 90m</li>
+      <li>Peron Boyutları: 100m</li>
       <li>Elektrifikasyon: 1500V DC rijit katener</li>
       <li>Sinyalizasyon: Bombardier Cityflo 650 (GoA4, UTO)</li>
       <li>Kumanda Merkezi ve Depo: Behiç Erkin Yerleşkesi (M8 Parseller İstasyonu'nun kuzeyi)</li>
@@ -829,7 +829,7 @@
       <li>Araç Sayısı: 4 vagonlu setler halinde 80 vagon (M3 ile ortak)</li>
       <li>Araç Numaralandırması:</li>
       <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
-      <li>Peron Boyutları: Olimpiyat-İkitelli Sanayi kesimi 180m, İkitelli Sanayi-Ataköy kesimi 90m</li>
+      <li>Peron Boyutları: Olimpiyat-İkitelli Sanayi kesimi 180m, İkitelli Sanayi-Ataköy kesimi 100m</li>
       <li>Elektrifikasyon: 1500V DC rijit katener</li>
       <li>Sinyalizasyon: Bombardier Cityflo 350 (GoA2, ATO, ATP)</li>
       <li>Kumanda Merkezi ve Depo: Olimpiyat Yerleşkesi (M9 Olimpiyat İstasyonu'nun batısı)</li>
@@ -1208,7 +1208,7 @@
       <li>Araç Numaralandırması:</li>
       <li>Maksimum hız: 100km/sa (İşletmede max. 50km/sa)</li>
       <li>Peron Boyutları: 90m</li>
-      <li>Elektrifikasyon: 750V DC rijit katener</li>
+      <li>Elektrifikasyon: 750V DC havai katener</li>
       <li>Sinyalizasyon: (Topkapı - KİPTAŞ-Venezia kesiminde) Bombardier Cityflo 250 (GoA1, ATP)</li>
       <li>Kumanda Merkezi ve Depo: Habibler Yerleşkesi (T4 Mescid-i Selam İstasyonu'nun kuzeyi)</li>
     </ul>
@@ -1893,7 +1893,7 @@
       <li>Sefer Süresi: 13,5dk</li>
       <li>Saatlik Tek Yöne Yolcu Sayısı: 70.000</li>
       <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
-      <li>Peron Boyutları: 90m</li>
+      <li>Peron Boyutları: 100m</li>
       <li>Elektrifikasyon: 1500V DC rijit katener</li>
       <li>Sinyalizasyon: Bombardier Cityflo 350 (GoA4, ATO, ATP)</li>
     </ul>
@@ -2433,7 +2433,7 @@
       <li>Araç Markası: Hyundai Rotem</li>
       <li>Araç Sayısı: 4 vagonlu setler halinde 40 vagon</li>
       <li>Maksimum hız: 100km/sa (İşletmede max. 80km/sa)</li>
-      <li>Peron Boyutları: 90m</li>
+      <li>Peron Boyutları: 100m</li>
       <li>Elektrifikasyon: 1500V DC rijit katener</li>
       <li>Sinyalizasyon: Bombardier Cityflo 650 (GoA4, UTO)</li>
       <li>Kumanda Merkezi ve Depo: Kumanda merkezi M8 Parseller İstasyonu'nun yanında, depo ise Finans Merkezi İstasyonu'nun yanında ve yer altındadır.</li>
@@ -4125,7 +4125,8 @@
       <button onclick="updateFrequency()">Hesapla</button>
       
       <div id="frequencyinfo">
-        <h3>Sefer Sıklığı: -dk</h3>
+        <h3 id="frequencyinfo1">Teorik Sefer Sıklığı: -dk</h3>
+        <h3 id="frequencyinfo2">Sefer Sıklığı (Daha Tutarlı): -dk</h3>
       </div>
     </p>
   </details>
@@ -4155,7 +4156,12 @@
       "./assets/background/dudullu-2.jpg",
       "./assets/background/icerenkoy.jpeg",
       "./assets/background/yenibosna.jpeg",
-      "./assets/background/asiyan.jpg"
+      "./assets/background/asiyan.jpg",
+      "./assets/background/atasehir-1.jpeg",
+      "./assets/background/atasehir-2.jpeg",
+      "./assets/background/meclis.jpeg",
+      //"./assets/background/samandira-1.jpeg",
+      //"./assets/background/samandira-2.jpeg"
     ]
 
     var image = images[Math.floor(Math.random()*images.length)];
@@ -4193,7 +4199,8 @@
       station = document.getElementById("stationinput").value;
       train = document.getElementById("traininput").value;
       
-      document.getElementById("frequencyinfo").innerHTML = "Sefer Sıklığı: " + (duration / station) * 2 * (station / train) + "dk"
+      document.getElementById("frequencyinfo1").innerHTML = "Teorik Sefer Sıklığı: " + (duration / (train / 2)).toFixed(2) + "dk";
+      document.getElementById("frequencyinfo2").innerHTML = "Sefer Sıklığı (Daha Tutarlı): " + (duration / (Math.floor(train * (9 / 10)) / 2)).toFixed(2) + "dk";
       return;
     }
   </script>

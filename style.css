@@ -24,9 +24,9 @@
     top: calc((-20px));
   }
   
-  .searchbar {
+  /*.searchbar {
     width: 40%;
-  }
+  }*/
 }
 
 @media (orientation: portrait) {
