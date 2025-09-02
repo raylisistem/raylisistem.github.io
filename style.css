@@ -2,6 +2,11 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Roboto-Flex;
+  src: url(./assets/RobotoFlex.ttf);
+}
+
 @media (orientation: landscape) {
   .split {
     display: flex;
@@ -12,15 +17,15 @@
     margin: 1%;
     border-radius: 1em;
   }
-  
-  .split div {
-    border-radius: 1em;
+
+  .split * {
+    width: 50%;
   }
 
   .homepage {
-    width: calc(100vw - 11px);
+    width: 100vw;
     height: 100vh;
-    right: calc((100vw - 800px + 10px) / 2);
+    right: calc((100vw - 960px + 20px) / 2);
     top: calc((-20px));
   }
   
@@ -63,6 +68,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Roboto-Flex;
 }
 
 .homepage {
@@ -75,7 +85,6 @@ html {
 table {
 	table-layout: auto;
 }
-
 
 .m1 {
   color: #EF1C24;
